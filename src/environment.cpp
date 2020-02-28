@@ -43,8 +43,8 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
 
   // RENDER OPTIONS
   // bool renderScene = false;
-  // bool render_obst = true;
-  // bool render_plane = true;
+  bool render_obst = false;
+  bool render_plane = true;
   bool render_clusters = true;
   bool render_box = true;
 
@@ -57,6 +57,15 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr& viewer, ProcessPointCloud
   // pcl::PointCloud<pcl::PointXYZI>::Ptr filterCloud;
   // filterCloud = pointProcessorI->FilterCloud(inputCloud, 0.8 , Eigen::Vector4f (-18.0, -8.0, -98.0, 1), Eigen::Vector4f ( 18.0, 8.0, 98.0, 1));
   // renderPointCloud(viewer,filterCloud,"filterCloud");
+  
+  if (render_obst) {
+      renderPointCloud(viewer, segmentCloud.first, "obstCloud", Color(1, 0, 0));
+  }
+
+  if (render_plane) {
+      renderPointCloud(viewer, segmentCloud.second, "planeCloud", Color(0, 1, 0));
+  }
+
   std::vector<pcl::PointCloud<pcl::PointXYZI>::Ptr> cloudClusters = pointProcessor.Clustering(segmentCloud.first, 0.53, 10.0, 500.0);
 
   int clusterId = 0;

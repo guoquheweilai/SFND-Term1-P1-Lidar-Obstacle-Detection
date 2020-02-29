@@ -13,9 +13,20 @@ In this course we will be talking about sensor fusion, whch is the process of ta
 
 **Sensor Fusion** by combing lidar's high resoultion imaging with radar's ability to measure velocity of objects we can get a better understanding of the sorrounding environment than we could using one of the sensors alone.  
 
-## (TODO)Prerequisites/Dependencies  
+## Prerequisites/Dependencies  
+* make >= 4.1(mac, linux), 3.81(Windows)
+  * Linux: make is installed by default on most Linux distros
+  * Mac: [install Xcode command line tools to get make](https://developer.apple.com/xcode/features/)
+  * Windows: [Click here for installation instructions](http://gnuwin32.sourceforge.net/packages/make.htm)
+* gcc/g++ >= 5.4
+  * Linux: gcc / g++ is installed by default on most Linux distros
+  * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
+  * Windows: recommend using [MinGW](http://www.mingw.org/)  
 
 ## Setup Instructions (abbreviated)  
+
+Meet the [`Prerequisites/Dependencies`](/README.md#L16)  
+
 ### Ubuntu 
 
 ```bash
@@ -308,7 +319,7 @@ cmake .. && make
 ./environment
 ```
 
-## (TODO)Tips  
+## Tips  
 1. It's recommended to update and upgrade your environment before running the code.  
 ```
 sudo apt-get update && sudo apt-get upgrade -y
